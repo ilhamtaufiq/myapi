@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lokasis",
+  "info": {
+    "name": "lokasi"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "desa": {
+      "type": "string"
+    },
+    "kecamatan": {
+      "model": "kecamatan",
+      "via": "desa_id"
+    }
+  }
+}

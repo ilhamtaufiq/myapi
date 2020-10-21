@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rekap_kegiatans",
+  "info": {
+    "name": "rekap kegiatan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "program": {
+      "type": "string"
+    },
+    "kegiatan": {
+      "type": "string"
+    },
+    "pekerjaan": {
+      "type": "string"
+    },
+    "desa": {
+      "type": "string"
+    },
+    "kecamatan": {
+      "type": "string"
+    },
+    "nomor_kontrak": {
+      "type": "string"
+    },
+    "nilai_kontrak": {
+      "type": "string"
+    },
+    "nama_rekanan": {
+      "type": "string"
+    },
+    "tgl_mulai": {
+      "type": "date"
+    },
+    "tgl_selesai": {
+      "type": "date"
+    },
+    "map": {
+      "via": "pekerjaan",
+      "model": "maps"
+    }
+  }
+}

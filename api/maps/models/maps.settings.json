@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "maps",
+  "info": {
+    "name": "maps"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "lat": {
+      "type": "float"
+    },
+    "long_": {
+      "type": "float"
+    },
+    "pekerjaan": {
+      "collection": "rekap-kegiatan",
+      "via": "map"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/kecamatans",
+      "handler": "kecamatan.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kecamatans/count",
+      "handler": "kecamatan.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kecamatans/:id",
+      "handler": "kecamatan.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kecamatans",
+      "handler": "kecamatan.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/kecamatans/:id",
+      "handler": "kecamatan.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/kecamatans/:id",
+      "handler": "kecamatan.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kecamatans",
+  "info": {
+    "name": "kecamatan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nama_kecamatan": {
+      "type": "string"
+    },
+    "desa_id": {
+      "via": "kecamatan",
+      "collection": "lokasi"
+    }
+  }
+}

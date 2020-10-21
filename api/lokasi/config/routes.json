@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lokasis",
+      "handler": "lokasi.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lokasis/count",
+      "handler": "lokasi.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lokasis/:id",
+      "handler": "lokasi.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lokasis",
+      "handler": "lokasi.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lokasis/:id",
+      "handler": "lokasi.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lokasis/:id",
+      "handler": "lokasi.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

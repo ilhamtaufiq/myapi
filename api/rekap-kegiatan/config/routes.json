@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rekap-kegiatans",
+      "handler": "rekap-kegiatan.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rekap-kegiatans/count",
+      "handler": "rekap-kegiatan.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rekap-kegiatans/:id",
+      "handler": "rekap-kegiatan.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rekap-kegiatans",
+      "handler": "rekap-kegiatan.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rekap-kegiatans/:id",
+      "handler": "rekap-kegiatan.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rekap-kegiatans/:id",
+      "handler": "rekap-kegiatan.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

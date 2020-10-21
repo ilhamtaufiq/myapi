@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usulan_kegiatans",
+  "info": {
+    "name": "Usulan Kegiatan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "desa": {
+      "type": "string"
+    },
+    "kecamatan": {
+      "type": "string"
+    },
+    "usulan_kegiatan": {
+      "type": "string"
+    }
+  }
+}

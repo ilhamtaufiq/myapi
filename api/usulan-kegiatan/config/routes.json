@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/usulan-kegiatans",
+      "handler": "usulan-kegiatan.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/usulan-kegiatans/count",
+      "handler": "usulan-kegiatan.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/usulan-kegiatans/:id",
+      "handler": "usulan-kegiatan.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/usulan-kegiatans",
+      "handler": "usulan-kegiatan.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/usulan-kegiatans/:id",
+      "handler": "usulan-kegiatan.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/usulan-kegiatans/:id",
+      "handler": "usulan-kegiatan.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
