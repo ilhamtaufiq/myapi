@@ -16,8 +16,7 @@
       "type": "float"
     },
     "pekerjaan": {
-      "collection": "rekap-kegiatan",
-      "via": "map"
+      "type": "string"
     }
   }
 }

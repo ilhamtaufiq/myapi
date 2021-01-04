@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/perjalanan-dinas",
+      "handler": "perjalanan-dinas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/perjalanan-dinas/count",
+      "handler": "perjalanan-dinas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/perjalanan-dinas/:id",
+      "handler": "perjalanan-dinas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/perjalanan-dinas",
+      "handler": "perjalanan-dinas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/perjalanan-dinas/:id",
+      "handler": "perjalanan-dinas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/perjalanan-dinas/:id",
+      "handler": "perjalanan-dinas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

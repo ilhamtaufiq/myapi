@@ -38,10 +38,6 @@
     },
     "tgl_selesai": {
       "type": "date"
-    },
-    "map": {
-      "via": "pekerjaan",
-      "model": "maps"
     }
   }
 }

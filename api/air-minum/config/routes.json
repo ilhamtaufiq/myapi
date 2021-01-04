@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/air-minums",
+      "handler": "air-minum.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/air-minums/count",
+      "handler": "air-minum.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/air-minums/:id",
+      "handler": "air-minum.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/air-minums",
+      "handler": "air-minum.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/air-minums/:id",
+      "handler": "air-minum.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/air-minums/:id",
+      "handler": "air-minum.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

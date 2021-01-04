@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perjalanan_dinas",
+  "info": {
+    "name": "Perjalanan Dinas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "lokasi_tujuan": {
+      "type": "string"
+    },
+    "tanggal": {
+      "type": "date"
+    },
+    "foto_visual": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

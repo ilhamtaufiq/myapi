@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "air_minums",
+  "info": {
+    "name": "Air Minum"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nama_pekerjaan": {
+      "type": "string"
+    },
+    "jumlah_sr": {
+      "type": "integer"
+    },
+    "panjang_pipa": {
+      "type": "integer"
+    },
+    "penduduk_terlayani": {
+      "type": "integer"
+    },
+    "nama_pengelola": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

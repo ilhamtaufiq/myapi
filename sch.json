@@ -1,0 +1,3135 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "_queryType": "Query",
+            "_mutationType": "Mutation",
+            "_subscriptionType": null,
+            "_directives": [
+                {
+                    "name": "cacheControl",
+                    "description": "",
+                    "locations": [
+                        "FIELD_DEFINITION",
+                        "OBJECT",
+                        "INTERFACE"
+                    ],
+                    "args": [
+                        {
+                            "name": "maxAge",
+                            "description": "",
+                            "type": "Int"
+                        },
+                        {
+                            "name": "scope",
+                            "description": "",
+                            "type": "CacheControlScope"
+                        }
+                    ]
+                },
+                {
+                    "name": "skip",
+                    "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
+                    "locations": [
+                        "FIELD",
+                        "FRAGMENT_SPREAD",
+                        "INLINE_FRAGMENT"
+                    ],
+                    "args": [
+                        {
+                            "name": "if",
+                            "description": "Skipped when true.",
+                            "type": "Boolean!"
+                        }
+                    ]
+                },
+                {
+                    "name": "include",
+                    "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
+                    "locations": [
+                        "FIELD",
+                        "FRAGMENT_SPREAD",
+                        "INLINE_FRAGMENT"
+                    ],
+                    "args": [
+                        {
+                            "name": "if",
+                            "description": "Included when true.",
+                            "type": "Boolean!"
+                        }
+                    ]
+                },
+                {
+                    "name": "deprecated",
+                    "description": "Marks an element of a GraphQL schema as no longer supported.",
+                    "locations": [
+                        "FIELD_DEFINITION",
+                        "ENUM_VALUE"
+                    ],
+                    "args": [
+                        {
+                            "name": "reason",
+                            "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax (as specified by [CommonMark](https://commonmark.org/).",
+                            "type": "String",
+                            "defaultValue": "No longer supported"
+                        }
+                    ]
+                }
+            ],
+            "astNode": null,
+            "_typeMap": {
+                "Query": "Query",
+                "ID": "ID",
+                "Kecamatan": "Kecamatan",
+                "DateTime": "DateTime",
+                "String": "String",
+                "AdminUser": "AdminUser",
+                "Int": "Int",
+                "JSON": "JSON",
+                "Lokasi": "Lokasi",
+                "KecamatanConnection": "KecamatanConnection",
+                "KecamatanGroupBy": "KecamatanGroupBy",
+                "KecamatanConnectionId": "KecamatanConnectionId",
+                "KecamatanConnectionCreated_at": "KecamatanConnectionCreated_at",
+                "KecamatanConnectionUpdated_at": "KecamatanConnectionUpdated_at",
+                "KecamatanConnectionNama_kecamatan": "KecamatanConnectionNama_kecamatan",
+                "KecamatanConnectionCreated_by": "KecamatanConnectionCreated_by",
+                "KecamatanConnectionUpdated_by": "KecamatanConnectionUpdated_by",
+                "KecamatanAggregator": "KecamatanAggregator",
+                "LokasiConnection": "LokasiConnection",
+                "LokasiGroupBy": "LokasiGroupBy",
+                "LokasiConnectionId": "LokasiConnectionId",
+                "LokasiConnectionCreated_at": "LokasiConnectionCreated_at",
+                "LokasiConnectionUpdated_at": "LokasiConnectionUpdated_at",
+                "LokasiConnectionDesa": "LokasiConnectionDesa",
+                "LokasiConnectionKecamatan": "LokasiConnectionKecamatan",
+                "LokasiConnectionCreated_by": "LokasiConnectionCreated_by",
+                "LokasiConnectionUpdated_by": "LokasiConnectionUpdated_by",
+                "LokasiAggregator": "LokasiAggregator",
+                "Maps": "Maps",
+                "Float": "Float",
+                "RekapKegiatan": "RekapKegiatan",
+                "Date": "Date",
+                "MapsConnection": "MapsConnection",
+                "MapsGroupBy": "MapsGroupBy",
+                "MapsConnectionId": "MapsConnectionId",
+                "MapsConnectionCreated_at": "MapsConnectionCreated_at",
+                "MapsConnectionUpdated_at": "MapsConnectionUpdated_at",
+                "MapsConnectionLat": "MapsConnectionLat",
+                "MapsConnectionLong_": "MapsConnectionLong_",
+                "MapsConnectionCreated_by": "MapsConnectionCreated_by",
+                "MapsConnectionUpdated_by": "MapsConnectionUpdated_by",
+                "MapsAggregator": "MapsAggregator",
+                "MapsAggregatorSum": "MapsAggregatorSum",
+                "MapsAggregatorAvg": "MapsAggregatorAvg",
+                "MapsAggregatorMin": "MapsAggregatorMin",
+                "MapsAggregatorMax": "MapsAggregatorMax",
+                "RekapKegiatanConnection": "RekapKegiatanConnection",
+                "RekapKegiatanGroupBy": "RekapKegiatanGroupBy",
+                "RekapKegiatanConnectionId": "RekapKegiatanConnectionId",
+                "RekapKegiatanConnectionCreated_at": "RekapKegiatanConnectionCreated_at",
+                "RekapKegiatanConnectionUpdated_at": "RekapKegiatanConnectionUpdated_at",
+                "RekapKegiatanConnectionProgram": "RekapKegiatanConnectionProgram",
+                "RekapKegiatanConnectionKegiatan": "RekapKegiatanConnectionKegiatan",
+                "RekapKegiatanConnectionPekerjaan": "RekapKegiatanConnectionPekerjaan",
+                "RekapKegiatanConnectionDesa": "RekapKegiatanConnectionDesa",
+                "RekapKegiatanConnectionKecamatan": "RekapKegiatanConnectionKecamatan",
+                "RekapKegiatanConnectionNomor_kontrak": "RekapKegiatanConnectionNomor_kontrak",
+                "RekapKegiatanConnectionNilai_kontrak": "RekapKegiatanConnectionNilai_kontrak",
+                "RekapKegiatanConnectionNama_rekanan": "RekapKegiatanConnectionNama_rekanan",
+                "RekapKegiatanConnectionTgl_mulai": "RekapKegiatanConnectionTgl_mulai",
+                "RekapKegiatanConnectionTgl_selesai": "RekapKegiatanConnectionTgl_selesai",
+                "RekapKegiatanConnectionMap": "RekapKegiatanConnectionMap",
+                "RekapKegiatanConnectionCreated_by": "RekapKegiatanConnectionCreated_by",
+                "RekapKegiatanConnectionUpdated_by": "RekapKegiatanConnectionUpdated_by",
+                "RekapKegiatanAggregator": "RekapKegiatanAggregator",
+                "UsulanKegiatan": "UsulanKegiatan",
+                "UsulanKegiatanConnection": "UsulanKegiatanConnection",
+                "UsulanKegiatanGroupBy": "UsulanKegiatanGroupBy",
+                "UsulanKegiatanConnectionId": "UsulanKegiatanConnectionId",
+                "UsulanKegiatanConnectionCreated_at": "UsulanKegiatanConnectionCreated_at",
+                "UsulanKegiatanConnectionUpdated_at": "UsulanKegiatanConnectionUpdated_at",
+                "UsulanKegiatanConnectionDesa": "UsulanKegiatanConnectionDesa",
+                "UsulanKegiatanConnectionKecamatan": "UsulanKegiatanConnectionKecamatan",
+                "UsulanKegiatanConnectionUsulan_kegiatan": "UsulanKegiatanConnectionUsulan_kegiatan",
+                "UsulanKegiatanConnectionCreated_by": "UsulanKegiatanConnectionCreated_by",
+                "UsulanKegiatanConnectionUpdated_by": "UsulanKegiatanConnectionUpdated_by",
+                "UsulanKegiatanAggregator": "UsulanKegiatanAggregator",
+                "UploadFile": "UploadFile",
+                "Morph": "Morph",
+                "UsersPermissionsMe": "UsersPermissionsMe",
+                "Boolean": "Boolean",
+                "UsersPermissionsMeRole": "UsersPermissionsMeRole",
+                "UsersPermissionsLoginPayload": "UsersPermissionsLoginPayload",
+                "UserPermissionsPasswordPayload": "UserPermissionsPasswordPayload",
+                "createKecamatanPayload": "createKecamatanPayload",
+                "updateKecamatanPayload": "updateKecamatanPayload",
+                "deleteKecamatanPayload": "deleteKecamatanPayload",
+                "createLokasiPayload": "createLokasiPayload",
+                "updateLokasiPayload": "updateLokasiPayload",
+                "deleteLokasiPayload": "deleteLokasiPayload",
+                "createMapPayload": "createMapPayload",
+                "updateMapPayload": "updateMapPayload",
+                "deleteMapPayload": "deleteMapPayload",
+                "createRekapKegiatanPayload": "createRekapKegiatanPayload",
+                "updateRekapKegiatanPayload": "updateRekapKegiatanPayload",
+                "deleteRekapKegiatanPayload": "deleteRekapKegiatanPayload",
+                "createUsulanKegiatanPayload": "createUsulanKegiatanPayload",
+                "updateUsulanKegiatanPayload": "updateUsulanKegiatanPayload",
+                "deleteUsulanKegiatanPayload": "deleteUsulanKegiatanPayload",
+                "UploadFileConnection": "UploadFileConnection",
+                "UploadFileGroupBy": "UploadFileGroupBy",
+                "UploadFileConnectionId": "UploadFileConnectionId",
+                "UploadFileConnectionCreated_at": "UploadFileConnectionCreated_at",
+                "UploadFileConnectionUpdated_at": "UploadFileConnectionUpdated_at",
+                "UploadFileConnectionName": "UploadFileConnectionName",
+                "UploadFileConnectionAlternativeText": "UploadFileConnectionAlternativeText",
+                "UploadFileConnectionCaption": "UploadFileConnectionCaption",
+                "UploadFileConnectionWidth": "UploadFileConnectionWidth",
+                "UploadFileConnectionHeight": "UploadFileConnectionHeight",
+                "UploadFileConnectionFormats": "UploadFileConnectionFormats",
+                "UploadFileConnectionHash": "UploadFileConnectionHash",
+                "UploadFileConnectionExt": "UploadFileConnectionExt",
+                "UploadFileConnectionMime": "UploadFileConnectionMime",
+                "UploadFileConnectionSize": "UploadFileConnectionSize",
+                "UploadFileConnectionUrl": "UploadFileConnectionUrl",
+                "UploadFileConnectionPreviewUrl": "UploadFileConnectionPreviewUrl",
+                "UploadFileConnectionProvider": "UploadFileConnectionProvider",
+                "UploadFileConnectionProvider_metadata": "UploadFileConnectionProvider_metadata",
+                "UploadFileConnectionCreated_by": "UploadFileConnectionCreated_by",
+                "UploadFileConnectionUpdated_by": "UploadFileConnectionUpdated_by",
+                "UploadFileAggregator": "UploadFileAggregator",
+                "UploadFileAggregatorSum": "UploadFileAggregatorSum",
+                "UploadFileAggregatorAvg": "UploadFileAggregatorAvg",
+                "UploadFileAggregatorMin": "UploadFileAggregatorMin",
+                "UploadFileAggregatorMax": "UploadFileAggregatorMax",
+                "UsersPermissionsPermission": "UsersPermissionsPermission",
+                "UsersPermissionsRole": "UsersPermissionsRole",
+                "UsersPermissionsUser": "UsersPermissionsUser",
+                "UsersPermissionsRoleConnection": "UsersPermissionsRoleConnection",
+                "UsersPermissionsRoleGroupBy": "UsersPermissionsRoleGroupBy",
+                "UsersPermissionsRoleConnectionId": "UsersPermissionsRoleConnectionId",
+                "UsersPermissionsRoleConnectionName": "UsersPermissionsRoleConnectionName",
+                "UsersPermissionsRoleConnectionDescription": "UsersPermissionsRoleConnectionDescription",
+                "UsersPermissionsRoleConnectionType": "UsersPermissionsRoleConnectionType",
+                "UsersPermissionsRoleConnectionCreated_by": "UsersPermissionsRoleConnectionCreated_by",
+                "UsersPermissionsRoleConnectionUpdated_by": "UsersPermissionsRoleConnectionUpdated_by",
+                "UsersPermissionsRoleAggregator": "UsersPermissionsRoleAggregator",
+                "createRolePayload": "createRolePayload",
+                "updateRolePayload": "updateRolePayload",
+                "deleteRolePayload": "deleteRolePayload",
+                "UsersPermissionsUserConnection": "UsersPermissionsUserConnection",
+                "UsersPermissionsUserGroupBy": "UsersPermissionsUserGroupBy",
+                "UsersPermissionsUserConnectionId": "UsersPermissionsUserConnectionId",
+                "UsersPermissionsUserConnectionCreated_at": "UsersPermissionsUserConnectionCreated_at",
+                "UsersPermissionsUserConnectionUpdated_at": "UsersPermissionsUserConnectionUpdated_at",
+                "UsersPermissionsUserConnectionUsername": "UsersPermissionsUserConnectionUsername",
+                "UsersPermissionsUserConnectionEmail": "UsersPermissionsUserConnectionEmail",
+                "UsersPermissionsUserConnectionProvider": "UsersPermissionsUserConnectionProvider",
+                "UsersPermissionsUserConnectionConfirmed": "UsersPermissionsUserConnectionConfirmed",
+                "UsersPermissionsUserConnectionBlocked": "UsersPermissionsUserConnectionBlocked",
+                "UsersPermissionsUserConnectionRole": "UsersPermissionsUserConnectionRole",
+                "UsersPermissionsUserConnectionCreated_by": "UsersPermissionsUserConnectionCreated_by",
+                "UsersPermissionsUserConnectionUpdated_by": "UsersPermissionsUserConnectionUpdated_by",
+                "UsersPermissionsUserAggregator": "UsersPermissionsUserAggregator",
+                "createUserPayload": "createUserPayload",
+                "updateUserPayload": "updateUserPayload",
+                "deleteUserPayload": "deleteUserPayload",
+                "Mutation": "Mutation",
+                "createKecamatanInput": "createKecamatanInput",
+                "KecamatanInput": "KecamatanInput",
+                "updateKecamatanInput": "updateKecamatanInput",
+                "InputID": "InputID",
+                "editKecamatanInput": "editKecamatanInput",
+                "deleteKecamatanInput": "deleteKecamatanInput",
+                "createLokasiInput": "createLokasiInput",
+                "LokasiInput": "LokasiInput",
+                "updateLokasiInput": "updateLokasiInput",
+                "editLokasiInput": "editLokasiInput",
+                "deleteLokasiInput": "deleteLokasiInput",
+                "createMapInput": "createMapInput",
+                "MapInput": "MapInput",
+                "updateMapInput": "updateMapInput",
+                "editMapInput": "editMapInput",
+                "deleteMapInput": "deleteMapInput",
+                "createRekapKegiatanInput": "createRekapKegiatanInput",
+                "RekapKegiatanInput": "RekapKegiatanInput",
+                "updateRekapKegiatanInput": "updateRekapKegiatanInput",
+                "editRekapKegiatanInput": "editRekapKegiatanInput",
+                "deleteRekapKegiatanInput": "deleteRekapKegiatanInput",
+                "createUsulanKegiatanInput": "createUsulanKegiatanInput",
+                "UsulanKegiatanInput": "UsulanKegiatanInput",
+                "updateUsulanKegiatanInput": "updateUsulanKegiatanInput",
+                "editUsulanKegiatanInput": "editUsulanKegiatanInput",
+                "deleteUsulanKegiatanInput": "deleteUsulanKegiatanInput",
+                "createRoleInput": "createRoleInput",
+                "RoleInput": "RoleInput",
+                "updateRoleInput": "updateRoleInput",
+                "editRoleInput": "editRoleInput",
+                "deleteRoleInput": "deleteRoleInput",
+                "createUserInput": "createUserInput",
+                "UserInput": "UserInput",
+                "updateUserInput": "updateUserInput",
+                "editUserInput": "editUserInput",
+                "deleteUserInput": "deleteUserInput",
+                "Upload": "Upload",
+                "FileInfoInput": "FileInfoInput",
+                "UsersPermissionsLoginInput": "UsersPermissionsLoginInput",
+                "UsersPermissionsRegisterInput": "UsersPermissionsRegisterInput",
+                "__Schema": "__Schema",
+                "__Type": "__Type",
+                "__TypeKind": "__TypeKind",
+                "__Field": "__Field",
+                "__InputValue": "__InputValue",
+                "__EnumValue": "__EnumValue",
+                "__Directive": "__Directive",
+                "__DirectiveLocation": "__DirectiveLocation",
+                "FileInput": "FileInput",
+                "editFileInput": "editFileInput",
+                "Time": "Time",
+                "Long": "Long",
+                "CacheControlScope": "CacheControlScope"
+            },
+            "_implementations": {}
+        }
+    ],
+    "required": [
+        "_queryType",
+        "_mutationType",
+        "_subscriptionType",
+        "_directives",
+        "astNode",
+        "_typeMap",
+        "_implementations"
+    ],
+    "properties": {
+        "_queryType": {
+            "$id": "#/properties/_queryType",
+            "type": "string",
+            "title": "The _queryType schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Query"
+            ]
+        },
+        "_mutationType": {
+            "$id": "#/properties/_mutationType",
+            "type": "string",
+            "title": "The _mutationType schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Mutation"
+            ]
+        },
+        "_subscriptionType": {
+            "$id": "#/properties/_subscriptionType",
+            "type": "null",
+            "title": "The _subscriptionType schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "_directives": {
+            "$id": "#/properties/_directives",
+            "type": "array",
+            "title": "The _directives schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "name": "cacheControl",
+                        "description": "",
+                        "locations": [
+                            "FIELD_DEFINITION",
+                            "OBJECT",
+                            "INTERFACE"
+                        ],
+                        "args": [
+                            {
+                                "name": "maxAge",
+                                "description": "",
+                                "type": "Int"
+                            },
+                            {
+                                "name": "scope",
+                                "description": "",
+                                "type": "CacheControlScope"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "skip",
+                        "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
+                        "locations": [
+                            "FIELD",
+                            "FRAGMENT_SPREAD",
+                            "INLINE_FRAGMENT"
+                        ],
+                        "args": [
+                            {
+                                "name": "if",
+                                "description": "Skipped when true.",
+                                "type": "Boolean!"
+                            }
+                        ]
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/_directives/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/_directives/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "name": "cacheControl",
+                                "description": "",
+                                "locations": [
+                                    "FIELD_DEFINITION",
+                                    "OBJECT",
+                                    "INTERFACE"
+                                ],
+                                "args": [
+                                    {
+                                        "name": "maxAge",
+                                        "description": "",
+                                        "type": "Int"
+                                    },
+                                    {
+                                        "name": "scope",
+                                        "description": "",
+                                        "type": "CacheControlScope"
+                                    }
+                                ]
+                            }
+                        ],
+                        "required": [
+                            "name",
+                            "description",
+                            "locations",
+                            "args"
+                        ],
+                        "properties": {
+                            "name": {
+                                "$id": "#/properties/_directives/items/anyOf/0/properties/name",
+                                "type": "string",
+                                "title": "The name schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "cacheControl"
+                                ]
+                            },
+                            "description": {
+                                "$id": "#/properties/_directives/items/anyOf/0/properties/description",
+                                "type": "string",
+                                "title": "The description schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "locations": {
+                                "$id": "#/properties/_directives/items/anyOf/0/properties/locations",
+                                "type": "array",
+                                "title": "The locations schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                    [
+                                        "FIELD_DEFINITION",
+                                        "OBJECT"
+                                    ]
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "$id": "#/properties/_directives/items/anyOf/0/properties/locations/items",
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/_directives/items/anyOf/0/properties/locations/items/anyOf/0",
+                                            "type": "string",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": "",
+                                            "examples": [
+                                                "FIELD_DEFINITION",
+                                                "OBJECT"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            "args": {
+                                "$id": "#/properties/_directives/items/anyOf/0/properties/args",
+                                "type": "array",
+                                "title": "The args schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                    [
+                                        {
+                                            "name": "maxAge",
+                                            "description": "",
+                                            "type": "Int"
+                                        },
+                                        {
+                                            "name": "scope",
+                                            "description": "",
+                                            "type": "CacheControlScope"
+                                        }
+                                    ]
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "$id": "#/properties/_directives/items/anyOf/0/properties/args/items",
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/_directives/items/anyOf/0/properties/args/items/anyOf/0",
+                                            "type": "object",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": {},
+                                            "examples": [
+                                                {
+                                                    "name": "maxAge",
+                                                    "description": "",
+                                                    "type": "Int"
+                                                }
+                                            ],
+                                            "required": [
+                                                "name",
+                                                "description",
+                                                "type"
+                                            ],
+                                            "properties": {
+                                                "name": {
+                                                    "$id": "#/properties/_directives/items/anyOf/0/properties/args/items/anyOf/0/properties/name",
+                                                    "type": "string",
+                                                    "title": "The name schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "maxAge"
+                                                    ]
+                                                },
+                                                "description": {
+                                                    "$id": "#/properties/_directives/items/anyOf/0/properties/args/items/anyOf/0/properties/description",
+                                                    "type": "string",
+                                                    "title": "The description schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        ""
+                                                    ]
+                                                },
+                                                "type": {
+                                                    "$id": "#/properties/_directives/items/anyOf/0/properties/args/items/anyOf/0/properties/type",
+                                                    "type": "string",
+                                                    "title": "The type schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "Int"
+                                                    ]
+                                                }
+                                            },
+                                            "additionalProperties": true
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        },
+        "astNode": {
+            "$id": "#/properties/astNode",
+            "type": "null",
+            "title": "The astNode schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "_typeMap": {
+            "$id": "#/properties/_typeMap",
+            "type": "object",
+            "title": "The _typeMap schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "Query": "Query",
+                    "ID": "ID",
+                    "Kecamatan": "Kecamatan",
+                    "DateTime": "DateTime",
+                    "String": "String",
+                    "AdminUser": "AdminUser",
+                    "Int": "Int",
+                    "JSON": "JSON",
+                    "Lokasi": "Lokasi",
+                    "KecamatanConnection": "KecamatanConnection",
+                    "KecamatanGroupBy": "KecamatanGroupBy",
+                    "KecamatanConnectionId": "KecamatanConnectionId",
+                    "KecamatanConnectionCreated_at": "KecamatanConnectionCreated_at",
+                    "KecamatanConnectionUpdated_at": "KecamatanConnectionUpdated_at",
+                    "KecamatanConnectionNama_kecamatan": "KecamatanConnectionNama_kecamatan",
+                    "KecamatanConnectionCreated_by": "KecamatanConnectionCreated_by",
+                    "KecamatanConnectionUpdated_by": "KecamatanConnectionUpdated_by",
+                    "KecamatanAggregator": "KecamatanAggregator",
+                    "LokasiConnection": "LokasiConnection",
+                    "LokasiGroupBy": "LokasiGroupBy",
+                    "LokasiConnectionId": "LokasiConnectionId",
+                    "LokasiConnectionCreated_at": "LokasiConnectionCreated_at",
+                    "LokasiConnectionUpdated_at": "LokasiConnectionUpdated_at",
+                    "LokasiConnectionDesa": "LokasiConnectionDesa",
+                    "LokasiConnectionKecamatan": "LokasiConnectionKecamatan",
+                    "LokasiConnectionCreated_by": "LokasiConnectionCreated_by",
+                    "LokasiConnectionUpdated_by": "LokasiConnectionUpdated_by",
+                    "LokasiAggregator": "LokasiAggregator",
+                    "Maps": "Maps",
+                    "Float": "Float",
+                    "RekapKegiatan": "RekapKegiatan",
+                    "Date": "Date",
+                    "MapsConnection": "MapsConnection",
+                    "MapsGroupBy": "MapsGroupBy",
+                    "MapsConnectionId": "MapsConnectionId",
+                    "MapsConnectionCreated_at": "MapsConnectionCreated_at",
+                    "MapsConnectionUpdated_at": "MapsConnectionUpdated_at",
+                    "MapsConnectionLat": "MapsConnectionLat",
+                    "MapsConnectionLong_": "MapsConnectionLong_",
+                    "MapsConnectionCreated_by": "MapsConnectionCreated_by",
+                    "MapsConnectionUpdated_by": "MapsConnectionUpdated_by",
+                    "MapsAggregator": "MapsAggregator",
+                    "MapsAggregatorSum": "MapsAggregatorSum",
+                    "MapsAggregatorAvg": "MapsAggregatorAvg",
+                    "MapsAggregatorMin": "MapsAggregatorMin",
+                    "MapsAggregatorMax": "MapsAggregatorMax",
+                    "RekapKegiatanConnection": "RekapKegiatanConnection",
+                    "RekapKegiatanGroupBy": "RekapKegiatanGroupBy",
+                    "RekapKegiatanConnectionId": "RekapKegiatanConnectionId",
+                    "RekapKegiatanConnectionCreated_at": "RekapKegiatanConnectionCreated_at",
+                    "RekapKegiatanConnectionUpdated_at": "RekapKegiatanConnectionUpdated_at",
+                    "RekapKegiatanConnectionProgram": "RekapKegiatanConnectionProgram",
+                    "RekapKegiatanConnectionKegiatan": "RekapKegiatanConnectionKegiatan",
+                    "RekapKegiatanConnectionPekerjaan": "RekapKegiatanConnectionPekerjaan",
+                    "RekapKegiatanConnectionDesa": "RekapKegiatanConnectionDesa",
+                    "RekapKegiatanConnectionKecamatan": "RekapKegiatanConnectionKecamatan",
+                    "RekapKegiatanConnectionNomor_kontrak": "RekapKegiatanConnectionNomor_kontrak",
+                    "RekapKegiatanConnectionNilai_kontrak": "RekapKegiatanConnectionNilai_kontrak",
+                    "RekapKegiatanConnectionNama_rekanan": "RekapKegiatanConnectionNama_rekanan",
+                    "RekapKegiatanConnectionTgl_mulai": "RekapKegiatanConnectionTgl_mulai",
+                    "RekapKegiatanConnectionTgl_selesai": "RekapKegiatanConnectionTgl_selesai",
+                    "RekapKegiatanConnectionMap": "RekapKegiatanConnectionMap",
+                    "RekapKegiatanConnectionCreated_by": "RekapKegiatanConnectionCreated_by",
+                    "RekapKegiatanConnectionUpdated_by": "RekapKegiatanConnectionUpdated_by",
+                    "RekapKegiatanAggregator": "RekapKegiatanAggregator",
+                    "UsulanKegiatan": "UsulanKegiatan",
+                    "UsulanKegiatanConnection": "UsulanKegiatanConnection",
+                    "UsulanKegiatanGroupBy": "UsulanKegiatanGroupBy",
+                    "UsulanKegiatanConnectionId": "UsulanKegiatanConnectionId",
+                    "UsulanKegiatanConnectionCreated_at": "UsulanKegiatanConnectionCreated_at",
+                    "UsulanKegiatanConnectionUpdated_at": "UsulanKegiatanConnectionUpdated_at",
+                    "UsulanKegiatanConnectionDesa": "UsulanKegiatanConnectionDesa",
+                    "UsulanKegiatanConnectionKecamatan": "UsulanKegiatanConnectionKecamatan",
+                    "UsulanKegiatanConnectionUsulan_kegiatan": "UsulanKegiatanConnectionUsulan_kegiatan",
+                    "UsulanKegiatanConnectionCreated_by": "UsulanKegiatanConnectionCreated_by",
+                    "UsulanKegiatanConnectionUpdated_by": "UsulanKegiatanConnectionUpdated_by",
+                    "UsulanKegiatanAggregator": "UsulanKegiatanAggregator",
+                    "UploadFile": "UploadFile",
+                    "Morph": "Morph",
+                    "UsersPermissionsMe": "UsersPermissionsMe",
+                    "Boolean": "Boolean",
+                    "UsersPermissionsMeRole": "UsersPermissionsMeRole",
+                    "UsersPermissionsLoginPayload": "UsersPermissionsLoginPayload",
+                    "UserPermissionsPasswordPayload": "UserPermissionsPasswordPayload",
+                    "createKecamatanPayload": "createKecamatanPayload",
+                    "updateKecamatanPayload": "updateKecamatanPayload",
+                    "deleteKecamatanPayload": "deleteKecamatanPayload",
+                    "createLokasiPayload": "createLokasiPayload",
+                    "updateLokasiPayload": "updateLokasiPayload",
+                    "deleteLokasiPayload": "deleteLokasiPayload",
+                    "createMapPayload": "createMapPayload",
+                    "updateMapPayload": "updateMapPayload",
+                    "deleteMapPayload": "deleteMapPayload",
+                    "createRekapKegiatanPayload": "createRekapKegiatanPayload",
+                    "updateRekapKegiatanPayload": "updateRekapKegiatanPayload",
+                    "deleteRekapKegiatanPayload": "deleteRekapKegiatanPayload",
+                    "createUsulanKegiatanPayload": "createUsulanKegiatanPayload",
+                    "updateUsulanKegiatanPayload": "updateUsulanKegiatanPayload",
+                    "deleteUsulanKegiatanPayload": "deleteUsulanKegiatanPayload",
+                    "UploadFileConnection": "UploadFileConnection",
+                    "UploadFileGroupBy": "UploadFileGroupBy",
+                    "UploadFileConnectionId": "UploadFileConnectionId",
+                    "UploadFileConnectionCreated_at": "UploadFileConnectionCreated_at",
+                    "UploadFileConnectionUpdated_at": "UploadFileConnectionUpdated_at",
+                    "UploadFileConnectionName": "UploadFileConnectionName",
+                    "UploadFileConnectionAlternativeText": "UploadFileConnectionAlternativeText",
+                    "UploadFileConnectionCaption": "UploadFileConnectionCaption",
+                    "UploadFileConnectionWidth": "UploadFileConnectionWidth",
+                    "UploadFileConnectionHeight": "UploadFileConnectionHeight",
+                    "UploadFileConnectionFormats": "UploadFileConnectionFormats",
+                    "UploadFileConnectionHash": "UploadFileConnectionHash",
+                    "UploadFileConnectionExt": "UploadFileConnectionExt",
+                    "UploadFileConnectionMime": "UploadFileConnectionMime",
+                    "UploadFileConnectionSize": "UploadFileConnectionSize",
+                    "UploadFileConnectionUrl": "UploadFileConnectionUrl",
+                    "UploadFileConnectionPreviewUrl": "UploadFileConnectionPreviewUrl",
+                    "UploadFileConnectionProvider": "UploadFileConnectionProvider",
+                    "UploadFileConnectionProvider_metadata": "UploadFileConnectionProvider_metadata",
+                    "UploadFileConnectionCreated_by": "UploadFileConnectionCreated_by",
+                    "UploadFileConnectionUpdated_by": "UploadFileConnectionUpdated_by",
+                    "UploadFileAggregator": "UploadFileAggregator",
+                    "UploadFileAggregatorSum": "UploadFileAggregatorSum",
+                    "UploadFileAggregatorAvg": "UploadFileAggregatorAvg",
+                    "UploadFileAggregatorMin": "UploadFileAggregatorMin",
+                    "UploadFileAggregatorMax": "UploadFileAggregatorMax",
+                    "UsersPermissionsPermission": "UsersPermissionsPermission",
+                    "UsersPermissionsRole": "UsersPermissionsRole",
+                    "UsersPermissionsUser": "UsersPermissionsUser",
+                    "UsersPermissionsRoleConnection": "UsersPermissionsRoleConnection",
+                    "UsersPermissionsRoleGroupBy": "UsersPermissionsRoleGroupBy",
+                    "UsersPermissionsRoleConnectionId": "UsersPermissionsRoleConnectionId",
+                    "UsersPermissionsRoleConnectionName": "UsersPermissionsRoleConnectionName",
+                    "UsersPermissionsRoleConnectionDescription": "UsersPermissionsRoleConnectionDescription",
+                    "UsersPermissionsRoleConnectionType": "UsersPermissionsRoleConnectionType",
+                    "UsersPermissionsRoleConnectionCreated_by": "UsersPermissionsRoleConnectionCreated_by",
+                    "UsersPermissionsRoleConnectionUpdated_by": "UsersPermissionsRoleConnectionUpdated_by",
+                    "UsersPermissionsRoleAggregator": "UsersPermissionsRoleAggregator",
+                    "createRolePayload": "createRolePayload",
+                    "updateRolePayload": "updateRolePayload",
+                    "deleteRolePayload": "deleteRolePayload",
+                    "UsersPermissionsUserConnection": "UsersPermissionsUserConnection",
+                    "UsersPermissionsUserGroupBy": "UsersPermissionsUserGroupBy",
+                    "UsersPermissionsUserConnectionId": "UsersPermissionsUserConnectionId",
+                    "UsersPermissionsUserConnectionCreated_at": "UsersPermissionsUserConnectionCreated_at",
+                    "UsersPermissionsUserConnectionUpdated_at": "UsersPermissionsUserConnectionUpdated_at",
+                    "UsersPermissionsUserConnectionUsername": "UsersPermissionsUserConnectionUsername",
+                    "UsersPermissionsUserConnectionEmail": "UsersPermissionsUserConnectionEmail",
+                    "UsersPermissionsUserConnectionProvider": "UsersPermissionsUserConnectionProvider",
+                    "UsersPermissionsUserConnectionConfirmed": "UsersPermissionsUserConnectionConfirmed",
+                    "UsersPermissionsUserConnectionBlocked": "UsersPermissionsUserConnectionBlocked",
+                    "UsersPermissionsUserConnectionRole": "UsersPermissionsUserConnectionRole",
+                    "UsersPermissionsUserConnectionCreated_by": "UsersPermissionsUserConnectionCreated_by",
+                    "UsersPermissionsUserConnectionUpdated_by": "UsersPermissionsUserConnectionUpdated_by",
+                    "UsersPermissionsUserAggregator": "UsersPermissionsUserAggregator",
+                    "createUserPayload": "createUserPayload",
+                    "updateUserPayload": "updateUserPayload",
+                    "deleteUserPayload": "deleteUserPayload",
+                    "Mutation": "Mutation",
+                    "createKecamatanInput": "createKecamatanInput",
+                    "KecamatanInput": "KecamatanInput",
+                    "updateKecamatanInput": "updateKecamatanInput",
+                    "InputID": "InputID",
+                    "editKecamatanInput": "editKecamatanInput",
+                    "deleteKecamatanInput": "deleteKecamatanInput",
+                    "createLokasiInput": "createLokasiInput",
+                    "LokasiInput": "LokasiInput",
+                    "updateLokasiInput": "updateLokasiInput",
+                    "editLokasiInput": "editLokasiInput",
+                    "deleteLokasiInput": "deleteLokasiInput",
+                    "createMapInput": "createMapInput",
+                    "MapInput": "MapInput",
+                    "updateMapInput": "updateMapInput",
+                    "editMapInput": "editMapInput",
+                    "deleteMapInput": "deleteMapInput",
+                    "createRekapKegiatanInput": "createRekapKegiatanInput",
+                    "RekapKegiatanInput": "RekapKegiatanInput",
+                    "updateRekapKegiatanInput": "updateRekapKegiatanInput",
+                    "editRekapKegiatanInput": "editRekapKegiatanInput",
+                    "deleteRekapKegiatanInput": "deleteRekapKegiatanInput",
+                    "createUsulanKegiatanInput": "createUsulanKegiatanInput",
+                    "UsulanKegiatanInput": "UsulanKegiatanInput",
+                    "updateUsulanKegiatanInput": "updateUsulanKegiatanInput",
+                    "editUsulanKegiatanInput": "editUsulanKegiatanInput",
+                    "deleteUsulanKegiatanInput": "deleteUsulanKegiatanInput",
+                    "createRoleInput": "createRoleInput",
+                    "RoleInput": "RoleInput",
+                    "updateRoleInput": "updateRoleInput",
+                    "editRoleInput": "editRoleInput",
+                    "deleteRoleInput": "deleteRoleInput",
+                    "createUserInput": "createUserInput",
+                    "UserInput": "UserInput",
+                    "updateUserInput": "updateUserInput",
+                    "editUserInput": "editUserInput",
+                    "deleteUserInput": "deleteUserInput",
+                    "Upload": "Upload",
+                    "FileInfoInput": "FileInfoInput",
+                    "UsersPermissionsLoginInput": "UsersPermissionsLoginInput",
+                    "UsersPermissionsRegisterInput": "UsersPermissionsRegisterInput",
+                    "__Schema": "__Schema",
+                    "__Type": "__Type",
+                    "__TypeKind": "__TypeKind",
+                    "__Field": "__Field",
+                    "__InputValue": "__InputValue",
+                    "__EnumValue": "__EnumValue",
+                    "__Directive": "__Directive",
+                    "__DirectiveLocation": "__DirectiveLocation",
+                    "FileInput": "FileInput",
+                    "editFileInput": "editFileInput",
+                    "Time": "Time",
+                    "Long": "Long",
+                    "CacheControlScope": "CacheControlScope"
+                }
+            ],
+            "required": [
+                "Query",
+                "ID",
+                "Kecamatan",
+                "DateTime",
+                "String",
+                "AdminUser",
+                "Int",
+                "JSON",
+                "Lokasi",
+                "KecamatanConnection",
+                "KecamatanGroupBy",
+                "KecamatanConnectionId",
+                "KecamatanConnectionCreated_at",
+                "KecamatanConnectionUpdated_at",
+                "KecamatanConnectionNama_kecamatan",
+                "KecamatanConnectionCreated_by",
+                "KecamatanConnectionUpdated_by",
+                "KecamatanAggregator",
+                "LokasiConnection",
+                "LokasiGroupBy",
+                "LokasiConnectionId",
+                "LokasiConnectionCreated_at",
+                "LokasiConnectionUpdated_at",
+                "LokasiConnectionDesa",
+                "LokasiConnectionKecamatan",
+                "LokasiConnectionCreated_by",
+                "LokasiConnectionUpdated_by",
+                "LokasiAggregator",
+                "Maps",
+                "Float",
+                "RekapKegiatan",
+                "Date",
+                "MapsConnection",
+                "MapsGroupBy",
+                "MapsConnectionId",
+                "MapsConnectionCreated_at",
+                "MapsConnectionUpdated_at",
+                "MapsConnectionLat",
+                "MapsConnectionLong_",
+                "MapsConnectionCreated_by",
+                "MapsConnectionUpdated_by",
+                "MapsAggregator",
+                "MapsAggregatorSum",
+                "MapsAggregatorAvg",
+                "MapsAggregatorMin",
+                "MapsAggregatorMax",
+                "RekapKegiatanConnection",
+                "RekapKegiatanGroupBy",
+                "RekapKegiatanConnectionId",
+                "RekapKegiatanConnectionCreated_at",
+                "RekapKegiatanConnectionUpdated_at",
+                "RekapKegiatanConnectionProgram",
+                "RekapKegiatanConnectionKegiatan",
+                "RekapKegiatanConnectionPekerjaan",
+                "RekapKegiatanConnectionDesa",
+                "RekapKegiatanConnectionKecamatan",
+                "RekapKegiatanConnectionNomor_kontrak",
+                "RekapKegiatanConnectionNilai_kontrak",
+                "RekapKegiatanConnectionNama_rekanan",
+                "RekapKegiatanConnectionTgl_mulai",
+                "RekapKegiatanConnectionTgl_selesai",
+                "RekapKegiatanConnectionMap",
+                "RekapKegiatanConnectionCreated_by",
+                "RekapKegiatanConnectionUpdated_by",
+                "RekapKegiatanAggregator",
+                "UsulanKegiatan",
+                "UsulanKegiatanConnection",
+                "UsulanKegiatanGroupBy",
+                "UsulanKegiatanConnectionId",
+                "UsulanKegiatanConnectionCreated_at",
+                "UsulanKegiatanConnectionUpdated_at",
+                "UsulanKegiatanConnectionDesa",
+                "UsulanKegiatanConnectionKecamatan",
+                "UsulanKegiatanConnectionUsulan_kegiatan",
+                "UsulanKegiatanConnectionCreated_by",
+                "UsulanKegiatanConnectionUpdated_by",
+                "UsulanKegiatanAggregator",
+                "UploadFile",
+                "Morph",
+                "UsersPermissionsMe",
+                "Boolean",
+                "UsersPermissionsMeRole",
+                "UsersPermissionsLoginPayload",
+                "UserPermissionsPasswordPayload",
+                "createKecamatanPayload",
+                "updateKecamatanPayload",
+                "deleteKecamatanPayload",
+                "createLokasiPayload",
+                "updateLokasiPayload",
+                "deleteLokasiPayload",
+                "createMapPayload",
+                "updateMapPayload",
+                "deleteMapPayload",
+                "createRekapKegiatanPayload",
+                "updateRekapKegiatanPayload",
+                "deleteRekapKegiatanPayload",
+                "createUsulanKegiatanPayload",
+                "updateUsulanKegiatanPayload",
+                "deleteUsulanKegiatanPayload",
+                "UploadFileConnection",
+                "UploadFileGroupBy",
+                "UploadFileConnectionId",
+                "UploadFileConnectionCreated_at",
+                "UploadFileConnectionUpdated_at",
+                "UploadFileConnectionName",
+                "UploadFileConnectionAlternativeText",
+                "UploadFileConnectionCaption",
+                "UploadFileConnectionWidth",
+                "UploadFileConnectionHeight",
+                "UploadFileConnectionFormats",
+                "UploadFileConnectionHash",
+                "UploadFileConnectionExt",
+                "UploadFileConnectionMime",
+                "UploadFileConnectionSize",
+                "UploadFileConnectionUrl",
+                "UploadFileConnectionPreviewUrl",
+                "UploadFileConnectionProvider",
+                "UploadFileConnectionProvider_metadata",
+                "UploadFileConnectionCreated_by",
+                "UploadFileConnectionUpdated_by",
+                "UploadFileAggregator",
+                "UploadFileAggregatorSum",
+                "UploadFileAggregatorAvg",
+                "UploadFileAggregatorMin",
+                "UploadFileAggregatorMax",
+                "UsersPermissionsPermission",
+                "UsersPermissionsRole",
+                "UsersPermissionsUser",
+                "UsersPermissionsRoleConnection",
+                "UsersPermissionsRoleGroupBy",
+                "UsersPermissionsRoleConnectionId",
+                "UsersPermissionsRoleConnectionName",
+                "UsersPermissionsRoleConnectionDescription",
+                "UsersPermissionsRoleConnectionType",
+                "UsersPermissionsRoleConnectionCreated_by",
+                "UsersPermissionsRoleConnectionUpdated_by",
+                "UsersPermissionsRoleAggregator",
+                "createRolePayload",
+                "updateRolePayload",
+                "deleteRolePayload",
+                "UsersPermissionsUserConnection",
+                "UsersPermissionsUserGroupBy",
+                "UsersPermissionsUserConnectionId",
+                "UsersPermissionsUserConnectionCreated_at",
+                "UsersPermissionsUserConnectionUpdated_at",
+                "UsersPermissionsUserConnectionUsername",
+                "UsersPermissionsUserConnectionEmail",
+                "UsersPermissionsUserConnectionProvider",
+                "UsersPermissionsUserConnectionConfirmed",
+                "UsersPermissionsUserConnectionBlocked",
+                "UsersPermissionsUserConnectionRole",
+                "UsersPermissionsUserConnectionCreated_by",
+                "UsersPermissionsUserConnectionUpdated_by",
+                "UsersPermissionsUserAggregator",
+                "createUserPayload",
+                "updateUserPayload",
+                "deleteUserPayload",
+                "Mutation",
+                "createKecamatanInput",
+                "KecamatanInput",
+                "updateKecamatanInput",
+                "InputID",
+                "editKecamatanInput",
+                "deleteKecamatanInput",
+                "createLokasiInput",
+                "LokasiInput",
+                "updateLokasiInput",
+                "editLokasiInput",
+                "deleteLokasiInput",
+                "createMapInput",
+                "MapInput",
+                "updateMapInput",
+                "editMapInput",
+                "deleteMapInput",
+                "createRekapKegiatanInput",
+                "RekapKegiatanInput",
+                "updateRekapKegiatanInput",
+                "editRekapKegiatanInput",
+                "deleteRekapKegiatanInput",
+                "createUsulanKegiatanInput",
+                "UsulanKegiatanInput",
+                "updateUsulanKegiatanInput",
+                "editUsulanKegiatanInput",
+                "deleteUsulanKegiatanInput",
+                "createRoleInput",
+                "RoleInput",
+                "updateRoleInput",
+                "editRoleInput",
+                "deleteRoleInput",
+                "createUserInput",
+                "UserInput",
+                "updateUserInput",
+                "editUserInput",
+                "deleteUserInput",
+                "Upload",
+                "FileInfoInput",
+                "UsersPermissionsLoginInput",
+                "UsersPermissionsRegisterInput",
+                "__Schema",
+                "__Type",
+                "__TypeKind",
+                "__Field",
+                "__InputValue",
+                "__EnumValue",
+                "__Directive",
+                "__DirectiveLocation",
+                "FileInput",
+                "editFileInput",
+                "Time",
+                "Long",
+                "CacheControlScope"
+            ],
+            "properties": {
+                "Query": {
+                    "$id": "#/properties/_typeMap/properties/Query",
+                    "type": "string",
+                    "title": "The Query schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Query"
+                    ]
+                },
+                "ID": {
+                    "$id": "#/properties/_typeMap/properties/ID",
+                    "type": "string",
+                    "title": "The ID schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "ID"
+                    ]
+                },
+                "Kecamatan": {
+                    "$id": "#/properties/_typeMap/properties/Kecamatan",
+                    "type": "string",
+                    "title": "The Kecamatan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Kecamatan"
+                    ]
+                },
+                "DateTime": {
+                    "$id": "#/properties/_typeMap/properties/DateTime",
+                    "type": "string",
+                    "title": "The DateTime schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "DateTime"
+                    ]
+                },
+                "String": {
+                    "$id": "#/properties/_typeMap/properties/String",
+                    "type": "string",
+                    "title": "The String schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "String"
+                    ]
+                },
+                "AdminUser": {
+                    "$id": "#/properties/_typeMap/properties/AdminUser",
+                    "type": "string",
+                    "title": "The AdminUser schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "AdminUser"
+                    ]
+                },
+                "Int": {
+                    "$id": "#/properties/_typeMap/properties/Int",
+                    "type": "string",
+                    "title": "The Int schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Int"
+                    ]
+                },
+                "JSON": {
+                    "$id": "#/properties/_typeMap/properties/JSON",
+                    "type": "string",
+                    "title": "The JSON schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "JSON"
+                    ]
+                },
+                "Lokasi": {
+                    "$id": "#/properties/_typeMap/properties/Lokasi",
+                    "type": "string",
+                    "title": "The Lokasi schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Lokasi"
+                    ]
+                },
+                "KecamatanConnection": {
+                    "$id": "#/properties/_typeMap/properties/KecamatanConnection",
+                    "type": "string",
+                    "title": "The KecamatanConnection schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "KecamatanConnection"
+                    ]
+                },
+                "KecamatanGroupBy": {
+                    "$id": "#/properties/_typeMap/properties/KecamatanGroupBy",
+                    "type": "string",
+                    "title": "The KecamatanGroupBy schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "KecamatanGroupBy"
+                    ]
+                },
+                "KecamatanConnectionId": {
+                    "$id": "#/properties/_typeMap/properties/KecamatanConnectionId",
+                    "type": "string",
+                    "title": "The KecamatanConnectionId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "KecamatanConnectionId"
+                    ]
+                },
+                "KecamatanConnectionCreated_at": {
+                    "$id": "#/properties/_typeMap/properties/KecamatanConnectionCreated_at",
+                    "type": "string",
+                    "title": "The KecamatanConnectionCreated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "KecamatanConnectionCreated_at"
+                    ]
+                },
+                "KecamatanConnectionUpdated_at": {
+                    "$id": "#/properties/_typeMap/properties/KecamatanConnectionUpdated_at",
+                    "type": "string",
+                    "title": "The KecamatanConnectionUpdated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "KecamatanConnectionUpdated_at"
+                    ]
+                },
+                "KecamatanConnectionNama_kecamatan": {
+                    "$id": "#/properties/_typeMap/properties/KecamatanConnectionNama_kecamatan",
+                    "type": "string",
+                    "title": "The KecamatanConnectionNama_kecamatan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "KecamatanConnectionNama_kecamatan"
+                    ]
+                },
+                "KecamatanConnectionCreated_by": {
+                    "$id": "#/properties/_typeMap/properties/KecamatanConnectionCreated_by",
+                    "type": "string",
+                    "title": "The KecamatanConnectionCreated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "KecamatanConnectionCreated_by"
+                    ]
+                },
+                "KecamatanConnectionUpdated_by": {
+                    "$id": "#/properties/_typeMap/properties/KecamatanConnectionUpdated_by",
+                    "type": "string",
+                    "title": "The KecamatanConnectionUpdated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "KecamatanConnectionUpdated_by"
+                    ]
+                },
+                "KecamatanAggregator": {
+                    "$id": "#/properties/_typeMap/properties/KecamatanAggregator",
+                    "type": "string",
+                    "title": "The KecamatanAggregator schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "KecamatanAggregator"
+                    ]
+                },
+                "LokasiConnection": {
+                    "$id": "#/properties/_typeMap/properties/LokasiConnection",
+                    "type": "string",
+                    "title": "The LokasiConnection schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiConnection"
+                    ]
+                },
+                "LokasiGroupBy": {
+                    "$id": "#/properties/_typeMap/properties/LokasiGroupBy",
+                    "type": "string",
+                    "title": "The LokasiGroupBy schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiGroupBy"
+                    ]
+                },
+                "LokasiConnectionId": {
+                    "$id": "#/properties/_typeMap/properties/LokasiConnectionId",
+                    "type": "string",
+                    "title": "The LokasiConnectionId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiConnectionId"
+                    ]
+                },
+                "LokasiConnectionCreated_at": {
+                    "$id": "#/properties/_typeMap/properties/LokasiConnectionCreated_at",
+                    "type": "string",
+                    "title": "The LokasiConnectionCreated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiConnectionCreated_at"
+                    ]
+                },
+                "LokasiConnectionUpdated_at": {
+                    "$id": "#/properties/_typeMap/properties/LokasiConnectionUpdated_at",
+                    "type": "string",
+                    "title": "The LokasiConnectionUpdated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiConnectionUpdated_at"
+                    ]
+                },
+                "LokasiConnectionDesa": {
+                    "$id": "#/properties/_typeMap/properties/LokasiConnectionDesa",
+                    "type": "string",
+                    "title": "The LokasiConnectionDesa schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiConnectionDesa"
+                    ]
+                },
+                "LokasiConnectionKecamatan": {
+                    "$id": "#/properties/_typeMap/properties/LokasiConnectionKecamatan",
+                    "type": "string",
+                    "title": "The LokasiConnectionKecamatan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiConnectionKecamatan"
+                    ]
+                },
+                "LokasiConnectionCreated_by": {
+                    "$id": "#/properties/_typeMap/properties/LokasiConnectionCreated_by",
+                    "type": "string",
+                    "title": "The LokasiConnectionCreated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiConnectionCreated_by"
+                    ]
+                },
+                "LokasiConnectionUpdated_by": {
+                    "$id": "#/properties/_typeMap/properties/LokasiConnectionUpdated_by",
+                    "type": "string",
+                    "title": "The LokasiConnectionUpdated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiConnectionUpdated_by"
+                    ]
+                },
+                "LokasiAggregator": {
+                    "$id": "#/properties/_typeMap/properties/LokasiAggregator",
+                    "type": "string",
+                    "title": "The LokasiAggregator schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiAggregator"
+                    ]
+                },
+                "Maps": {
+                    "$id": "#/properties/_typeMap/properties/Maps",
+                    "type": "string",
+                    "title": "The Maps schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Maps"
+                    ]
+                },
+                "Float": {
+                    "$id": "#/properties/_typeMap/properties/Float",
+                    "type": "string",
+                    "title": "The Float schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Float"
+                    ]
+                },
+                "RekapKegiatan": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatan",
+                    "type": "string",
+                    "title": "The RekapKegiatan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatan"
+                    ]
+                },
+                "Date": {
+                    "$id": "#/properties/_typeMap/properties/Date",
+                    "type": "string",
+                    "title": "The Date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Date"
+                    ]
+                },
+                "MapsConnection": {
+                    "$id": "#/properties/_typeMap/properties/MapsConnection",
+                    "type": "string",
+                    "title": "The MapsConnection schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsConnection"
+                    ]
+                },
+                "MapsGroupBy": {
+                    "$id": "#/properties/_typeMap/properties/MapsGroupBy",
+                    "type": "string",
+                    "title": "The MapsGroupBy schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsGroupBy"
+                    ]
+                },
+                "MapsConnectionId": {
+                    "$id": "#/properties/_typeMap/properties/MapsConnectionId",
+                    "type": "string",
+                    "title": "The MapsConnectionId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsConnectionId"
+                    ]
+                },
+                "MapsConnectionCreated_at": {
+                    "$id": "#/properties/_typeMap/properties/MapsConnectionCreated_at",
+                    "type": "string",
+                    "title": "The MapsConnectionCreated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsConnectionCreated_at"
+                    ]
+                },
+                "MapsConnectionUpdated_at": {
+                    "$id": "#/properties/_typeMap/properties/MapsConnectionUpdated_at",
+                    "type": "string",
+                    "title": "The MapsConnectionUpdated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsConnectionUpdated_at"
+                    ]
+                },
+                "MapsConnectionLat": {
+                    "$id": "#/properties/_typeMap/properties/MapsConnectionLat",
+                    "type": "string",
+                    "title": "The MapsConnectionLat schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsConnectionLat"
+                    ]
+                },
+                "MapsConnectionLong_": {
+                    "$id": "#/properties/_typeMap/properties/MapsConnectionLong_",
+                    "type": "string",
+                    "title": "The MapsConnectionLong_ schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsConnectionLong_"
+                    ]
+                },
+                "MapsConnectionCreated_by": {
+                    "$id": "#/properties/_typeMap/properties/MapsConnectionCreated_by",
+                    "type": "string",
+                    "title": "The MapsConnectionCreated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsConnectionCreated_by"
+                    ]
+                },
+                "MapsConnectionUpdated_by": {
+                    "$id": "#/properties/_typeMap/properties/MapsConnectionUpdated_by",
+                    "type": "string",
+                    "title": "The MapsConnectionUpdated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsConnectionUpdated_by"
+                    ]
+                },
+                "MapsAggregator": {
+                    "$id": "#/properties/_typeMap/properties/MapsAggregator",
+                    "type": "string",
+                    "title": "The MapsAggregator schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsAggregator"
+                    ]
+                },
+                "MapsAggregatorSum": {
+                    "$id": "#/properties/_typeMap/properties/MapsAggregatorSum",
+                    "type": "string",
+                    "title": "The MapsAggregatorSum schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsAggregatorSum"
+                    ]
+                },
+                "MapsAggregatorAvg": {
+                    "$id": "#/properties/_typeMap/properties/MapsAggregatorAvg",
+                    "type": "string",
+                    "title": "The MapsAggregatorAvg schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsAggregatorAvg"
+                    ]
+                },
+                "MapsAggregatorMin": {
+                    "$id": "#/properties/_typeMap/properties/MapsAggregatorMin",
+                    "type": "string",
+                    "title": "The MapsAggregatorMin schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsAggregatorMin"
+                    ]
+                },
+                "MapsAggregatorMax": {
+                    "$id": "#/properties/_typeMap/properties/MapsAggregatorMax",
+                    "type": "string",
+                    "title": "The MapsAggregatorMax schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapsAggregatorMax"
+                    ]
+                },
+                "RekapKegiatanConnection": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnection",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnection schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnection"
+                    ]
+                },
+                "RekapKegiatanGroupBy": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanGroupBy",
+                    "type": "string",
+                    "title": "The RekapKegiatanGroupBy schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanGroupBy"
+                    ]
+                },
+                "RekapKegiatanConnectionId": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionId",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionId"
+                    ]
+                },
+                "RekapKegiatanConnectionCreated_at": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionCreated_at",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionCreated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionCreated_at"
+                    ]
+                },
+                "RekapKegiatanConnectionUpdated_at": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionUpdated_at",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionUpdated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionUpdated_at"
+                    ]
+                },
+                "RekapKegiatanConnectionProgram": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionProgram",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionProgram schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionProgram"
+                    ]
+                },
+                "RekapKegiatanConnectionKegiatan": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionKegiatan",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionKegiatan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionKegiatan"
+                    ]
+                },
+                "RekapKegiatanConnectionPekerjaan": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionPekerjaan",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionPekerjaan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionPekerjaan"
+                    ]
+                },
+                "RekapKegiatanConnectionDesa": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionDesa",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionDesa schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionDesa"
+                    ]
+                },
+                "RekapKegiatanConnectionKecamatan": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionKecamatan",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionKecamatan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionKecamatan"
+                    ]
+                },
+                "RekapKegiatanConnectionNomor_kontrak": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionNomor_kontrak",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionNomor_kontrak schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionNomor_kontrak"
+                    ]
+                },
+                "RekapKegiatanConnectionNilai_kontrak": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionNilai_kontrak",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionNilai_kontrak schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionNilai_kontrak"
+                    ]
+                },
+                "RekapKegiatanConnectionNama_rekanan": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionNama_rekanan",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionNama_rekanan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionNama_rekanan"
+                    ]
+                },
+                "RekapKegiatanConnectionTgl_mulai": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionTgl_mulai",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionTgl_mulai schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionTgl_mulai"
+                    ]
+                },
+                "RekapKegiatanConnectionTgl_selesai": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionTgl_selesai",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionTgl_selesai schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionTgl_selesai"
+                    ]
+                },
+                "RekapKegiatanConnectionMap": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionMap",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionMap schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionMap"
+                    ]
+                },
+                "RekapKegiatanConnectionCreated_by": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionCreated_by",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionCreated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionCreated_by"
+                    ]
+                },
+                "RekapKegiatanConnectionUpdated_by": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanConnectionUpdated_by",
+                    "type": "string",
+                    "title": "The RekapKegiatanConnectionUpdated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanConnectionUpdated_by"
+                    ]
+                },
+                "RekapKegiatanAggregator": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanAggregator",
+                    "type": "string",
+                    "title": "The RekapKegiatanAggregator schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanAggregator"
+                    ]
+                },
+                "UsulanKegiatan": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatan",
+                    "type": "string",
+                    "title": "The UsulanKegiatan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatan"
+                    ]
+                },
+                "UsulanKegiatanConnection": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanConnection",
+                    "type": "string",
+                    "title": "The UsulanKegiatanConnection schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanConnection"
+                    ]
+                },
+                "UsulanKegiatanGroupBy": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanGroupBy",
+                    "type": "string",
+                    "title": "The UsulanKegiatanGroupBy schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanGroupBy"
+                    ]
+                },
+                "UsulanKegiatanConnectionId": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanConnectionId",
+                    "type": "string",
+                    "title": "The UsulanKegiatanConnectionId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanConnectionId"
+                    ]
+                },
+                "UsulanKegiatanConnectionCreated_at": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanConnectionCreated_at",
+                    "type": "string",
+                    "title": "The UsulanKegiatanConnectionCreated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanConnectionCreated_at"
+                    ]
+                },
+                "UsulanKegiatanConnectionUpdated_at": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanConnectionUpdated_at",
+                    "type": "string",
+                    "title": "The UsulanKegiatanConnectionUpdated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanConnectionUpdated_at"
+                    ]
+                },
+                "UsulanKegiatanConnectionDesa": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanConnectionDesa",
+                    "type": "string",
+                    "title": "The UsulanKegiatanConnectionDesa schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanConnectionDesa"
+                    ]
+                },
+                "UsulanKegiatanConnectionKecamatan": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanConnectionKecamatan",
+                    "type": "string",
+                    "title": "The UsulanKegiatanConnectionKecamatan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanConnectionKecamatan"
+                    ]
+                },
+                "UsulanKegiatanConnectionUsulan_kegiatan": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanConnectionUsulan_kegiatan",
+                    "type": "string",
+                    "title": "The UsulanKegiatanConnectionUsulan_kegiatan schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanConnectionUsulan_kegiatan"
+                    ]
+                },
+                "UsulanKegiatanConnectionCreated_by": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanConnectionCreated_by",
+                    "type": "string",
+                    "title": "The UsulanKegiatanConnectionCreated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanConnectionCreated_by"
+                    ]
+                },
+                "UsulanKegiatanConnectionUpdated_by": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanConnectionUpdated_by",
+                    "type": "string",
+                    "title": "The UsulanKegiatanConnectionUpdated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanConnectionUpdated_by"
+                    ]
+                },
+                "UsulanKegiatanAggregator": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanAggregator",
+                    "type": "string",
+                    "title": "The UsulanKegiatanAggregator schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanAggregator"
+                    ]
+                },
+                "UploadFile": {
+                    "$id": "#/properties/_typeMap/properties/UploadFile",
+                    "type": "string",
+                    "title": "The UploadFile schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFile"
+                    ]
+                },
+                "Morph": {
+                    "$id": "#/properties/_typeMap/properties/Morph",
+                    "type": "string",
+                    "title": "The Morph schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Morph"
+                    ]
+                },
+                "UsersPermissionsMe": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsMe",
+                    "type": "string",
+                    "title": "The UsersPermissionsMe schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsMe"
+                    ]
+                },
+                "Boolean": {
+                    "$id": "#/properties/_typeMap/properties/Boolean",
+                    "type": "string",
+                    "title": "The Boolean schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Boolean"
+                    ]
+                },
+                "UsersPermissionsMeRole": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsMeRole",
+                    "type": "string",
+                    "title": "The UsersPermissionsMeRole schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsMeRole"
+                    ]
+                },
+                "UsersPermissionsLoginPayload": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsLoginPayload",
+                    "type": "string",
+                    "title": "The UsersPermissionsLoginPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsLoginPayload"
+                    ]
+                },
+                "UserPermissionsPasswordPayload": {
+                    "$id": "#/properties/_typeMap/properties/UserPermissionsPasswordPayload",
+                    "type": "string",
+                    "title": "The UserPermissionsPasswordPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UserPermissionsPasswordPayload"
+                    ]
+                },
+                "createKecamatanPayload": {
+                    "$id": "#/properties/_typeMap/properties/createKecamatanPayload",
+                    "type": "string",
+                    "title": "The createKecamatanPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createKecamatanPayload"
+                    ]
+                },
+                "updateKecamatanPayload": {
+                    "$id": "#/properties/_typeMap/properties/updateKecamatanPayload",
+                    "type": "string",
+                    "title": "The updateKecamatanPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateKecamatanPayload"
+                    ]
+                },
+                "deleteKecamatanPayload": {
+                    "$id": "#/properties/_typeMap/properties/deleteKecamatanPayload",
+                    "type": "string",
+                    "title": "The deleteKecamatanPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteKecamatanPayload"
+                    ]
+                },
+                "createLokasiPayload": {
+                    "$id": "#/properties/_typeMap/properties/createLokasiPayload",
+                    "type": "string",
+                    "title": "The createLokasiPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createLokasiPayload"
+                    ]
+                },
+                "updateLokasiPayload": {
+                    "$id": "#/properties/_typeMap/properties/updateLokasiPayload",
+                    "type": "string",
+                    "title": "The updateLokasiPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateLokasiPayload"
+                    ]
+                },
+                "deleteLokasiPayload": {
+                    "$id": "#/properties/_typeMap/properties/deleteLokasiPayload",
+                    "type": "string",
+                    "title": "The deleteLokasiPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteLokasiPayload"
+                    ]
+                },
+                "createMapPayload": {
+                    "$id": "#/properties/_typeMap/properties/createMapPayload",
+                    "type": "string",
+                    "title": "The createMapPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createMapPayload"
+                    ]
+                },
+                "updateMapPayload": {
+                    "$id": "#/properties/_typeMap/properties/updateMapPayload",
+                    "type": "string",
+                    "title": "The updateMapPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateMapPayload"
+                    ]
+                },
+                "deleteMapPayload": {
+                    "$id": "#/properties/_typeMap/properties/deleteMapPayload",
+                    "type": "string",
+                    "title": "The deleteMapPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteMapPayload"
+                    ]
+                },
+                "createRekapKegiatanPayload": {
+                    "$id": "#/properties/_typeMap/properties/createRekapKegiatanPayload",
+                    "type": "string",
+                    "title": "The createRekapKegiatanPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createRekapKegiatanPayload"
+                    ]
+                },
+                "updateRekapKegiatanPayload": {
+                    "$id": "#/properties/_typeMap/properties/updateRekapKegiatanPayload",
+                    "type": "string",
+                    "title": "The updateRekapKegiatanPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateRekapKegiatanPayload"
+                    ]
+                },
+                "deleteRekapKegiatanPayload": {
+                    "$id": "#/properties/_typeMap/properties/deleteRekapKegiatanPayload",
+                    "type": "string",
+                    "title": "The deleteRekapKegiatanPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteRekapKegiatanPayload"
+                    ]
+                },
+                "createUsulanKegiatanPayload": {
+                    "$id": "#/properties/_typeMap/properties/createUsulanKegiatanPayload",
+                    "type": "string",
+                    "title": "The createUsulanKegiatanPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createUsulanKegiatanPayload"
+                    ]
+                },
+                "updateUsulanKegiatanPayload": {
+                    "$id": "#/properties/_typeMap/properties/updateUsulanKegiatanPayload",
+                    "type": "string",
+                    "title": "The updateUsulanKegiatanPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateUsulanKegiatanPayload"
+                    ]
+                },
+                "deleteUsulanKegiatanPayload": {
+                    "$id": "#/properties/_typeMap/properties/deleteUsulanKegiatanPayload",
+                    "type": "string",
+                    "title": "The deleteUsulanKegiatanPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteUsulanKegiatanPayload"
+                    ]
+                },
+                "UploadFileConnection": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnection",
+                    "type": "string",
+                    "title": "The UploadFileConnection schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnection"
+                    ]
+                },
+                "UploadFileGroupBy": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileGroupBy",
+                    "type": "string",
+                    "title": "The UploadFileGroupBy schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileGroupBy"
+                    ]
+                },
+                "UploadFileConnectionId": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionId",
+                    "type": "string",
+                    "title": "The UploadFileConnectionId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionId"
+                    ]
+                },
+                "UploadFileConnectionCreated_at": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionCreated_at",
+                    "type": "string",
+                    "title": "The UploadFileConnectionCreated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionCreated_at"
+                    ]
+                },
+                "UploadFileConnectionUpdated_at": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionUpdated_at",
+                    "type": "string",
+                    "title": "The UploadFileConnectionUpdated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionUpdated_at"
+                    ]
+                },
+                "UploadFileConnectionName": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionName",
+                    "type": "string",
+                    "title": "The UploadFileConnectionName schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionName"
+                    ]
+                },
+                "UploadFileConnectionAlternativeText": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionAlternativeText",
+                    "type": "string",
+                    "title": "The UploadFileConnectionAlternativeText schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionAlternativeText"
+                    ]
+                },
+                "UploadFileConnectionCaption": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionCaption",
+                    "type": "string",
+                    "title": "The UploadFileConnectionCaption schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionCaption"
+                    ]
+                },
+                "UploadFileConnectionWidth": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionWidth",
+                    "type": "string",
+                    "title": "The UploadFileConnectionWidth schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionWidth"
+                    ]
+                },
+                "UploadFileConnectionHeight": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionHeight",
+                    "type": "string",
+                    "title": "The UploadFileConnectionHeight schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionHeight"
+                    ]
+                },
+                "UploadFileConnectionFormats": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionFormats",
+                    "type": "string",
+                    "title": "The UploadFileConnectionFormats schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionFormats"
+                    ]
+                },
+                "UploadFileConnectionHash": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionHash",
+                    "type": "string",
+                    "title": "The UploadFileConnectionHash schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionHash"
+                    ]
+                },
+                "UploadFileConnectionExt": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionExt",
+                    "type": "string",
+                    "title": "The UploadFileConnectionExt schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionExt"
+                    ]
+                },
+                "UploadFileConnectionMime": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionMime",
+                    "type": "string",
+                    "title": "The UploadFileConnectionMime schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionMime"
+                    ]
+                },
+                "UploadFileConnectionSize": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionSize",
+                    "type": "string",
+                    "title": "The UploadFileConnectionSize schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionSize"
+                    ]
+                },
+                "UploadFileConnectionUrl": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionUrl",
+                    "type": "string",
+                    "title": "The UploadFileConnectionUrl schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionUrl"
+                    ]
+                },
+                "UploadFileConnectionPreviewUrl": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionPreviewUrl",
+                    "type": "string",
+                    "title": "The UploadFileConnectionPreviewUrl schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionPreviewUrl"
+                    ]
+                },
+                "UploadFileConnectionProvider": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionProvider",
+                    "type": "string",
+                    "title": "The UploadFileConnectionProvider schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionProvider"
+                    ]
+                },
+                "UploadFileConnectionProvider_metadata": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionProvider_metadata",
+                    "type": "string",
+                    "title": "The UploadFileConnectionProvider_metadata schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionProvider_metadata"
+                    ]
+                },
+                "UploadFileConnectionCreated_by": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionCreated_by",
+                    "type": "string",
+                    "title": "The UploadFileConnectionCreated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionCreated_by"
+                    ]
+                },
+                "UploadFileConnectionUpdated_by": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileConnectionUpdated_by",
+                    "type": "string",
+                    "title": "The UploadFileConnectionUpdated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileConnectionUpdated_by"
+                    ]
+                },
+                "UploadFileAggregator": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileAggregator",
+                    "type": "string",
+                    "title": "The UploadFileAggregator schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileAggregator"
+                    ]
+                },
+                "UploadFileAggregatorSum": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileAggregatorSum",
+                    "type": "string",
+                    "title": "The UploadFileAggregatorSum schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileAggregatorSum"
+                    ]
+                },
+                "UploadFileAggregatorAvg": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileAggregatorAvg",
+                    "type": "string",
+                    "title": "The UploadFileAggregatorAvg schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileAggregatorAvg"
+                    ]
+                },
+                "UploadFileAggregatorMin": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileAggregatorMin",
+                    "type": "string",
+                    "title": "The UploadFileAggregatorMin schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileAggregatorMin"
+                    ]
+                },
+                "UploadFileAggregatorMax": {
+                    "$id": "#/properties/_typeMap/properties/UploadFileAggregatorMax",
+                    "type": "string",
+                    "title": "The UploadFileAggregatorMax schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UploadFileAggregatorMax"
+                    ]
+                },
+                "UsersPermissionsPermission": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsPermission",
+                    "type": "string",
+                    "title": "The UsersPermissionsPermission schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsPermission"
+                    ]
+                },
+                "UsersPermissionsRole": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRole",
+                    "type": "string",
+                    "title": "The UsersPermissionsRole schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRole"
+                    ]
+                },
+                "UsersPermissionsUser": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUser",
+                    "type": "string",
+                    "title": "The UsersPermissionsUser schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUser"
+                    ]
+                },
+                "UsersPermissionsRoleConnection": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRoleConnection",
+                    "type": "string",
+                    "title": "The UsersPermissionsRoleConnection schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRoleConnection"
+                    ]
+                },
+                "UsersPermissionsRoleGroupBy": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRoleGroupBy",
+                    "type": "string",
+                    "title": "The UsersPermissionsRoleGroupBy schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRoleGroupBy"
+                    ]
+                },
+                "UsersPermissionsRoleConnectionId": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRoleConnectionId",
+                    "type": "string",
+                    "title": "The UsersPermissionsRoleConnectionId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRoleConnectionId"
+                    ]
+                },
+                "UsersPermissionsRoleConnectionName": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRoleConnectionName",
+                    "type": "string",
+                    "title": "The UsersPermissionsRoleConnectionName schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRoleConnectionName"
+                    ]
+                },
+                "UsersPermissionsRoleConnectionDescription": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRoleConnectionDescription",
+                    "type": "string",
+                    "title": "The UsersPermissionsRoleConnectionDescription schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRoleConnectionDescription"
+                    ]
+                },
+                "UsersPermissionsRoleConnectionType": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRoleConnectionType",
+                    "type": "string",
+                    "title": "The UsersPermissionsRoleConnectionType schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRoleConnectionType"
+                    ]
+                },
+                "UsersPermissionsRoleConnectionCreated_by": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRoleConnectionCreated_by",
+                    "type": "string",
+                    "title": "The UsersPermissionsRoleConnectionCreated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRoleConnectionCreated_by"
+                    ]
+                },
+                "UsersPermissionsRoleConnectionUpdated_by": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRoleConnectionUpdated_by",
+                    "type": "string",
+                    "title": "The UsersPermissionsRoleConnectionUpdated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRoleConnectionUpdated_by"
+                    ]
+                },
+                "UsersPermissionsRoleAggregator": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRoleAggregator",
+                    "type": "string",
+                    "title": "The UsersPermissionsRoleAggregator schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRoleAggregator"
+                    ]
+                },
+                "createRolePayload": {
+                    "$id": "#/properties/_typeMap/properties/createRolePayload",
+                    "type": "string",
+                    "title": "The createRolePayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createRolePayload"
+                    ]
+                },
+                "updateRolePayload": {
+                    "$id": "#/properties/_typeMap/properties/updateRolePayload",
+                    "type": "string",
+                    "title": "The updateRolePayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateRolePayload"
+                    ]
+                },
+                "deleteRolePayload": {
+                    "$id": "#/properties/_typeMap/properties/deleteRolePayload",
+                    "type": "string",
+                    "title": "The deleteRolePayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteRolePayload"
+                    ]
+                },
+                "UsersPermissionsUserConnection": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnection",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnection schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnection"
+                    ]
+                },
+                "UsersPermissionsUserGroupBy": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserGroupBy",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserGroupBy schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserGroupBy"
+                    ]
+                },
+                "UsersPermissionsUserConnectionId": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionId",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionId"
+                    ]
+                },
+                "UsersPermissionsUserConnectionCreated_at": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionCreated_at",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionCreated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionCreated_at"
+                    ]
+                },
+                "UsersPermissionsUserConnectionUpdated_at": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionUpdated_at",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionUpdated_at schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionUpdated_at"
+                    ]
+                },
+                "UsersPermissionsUserConnectionUsername": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionUsername",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionUsername schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionUsername"
+                    ]
+                },
+                "UsersPermissionsUserConnectionEmail": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionEmail",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionEmail schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionEmail"
+                    ]
+                },
+                "UsersPermissionsUserConnectionProvider": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionProvider",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionProvider schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionProvider"
+                    ]
+                },
+                "UsersPermissionsUserConnectionConfirmed": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionConfirmed",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionConfirmed schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionConfirmed"
+                    ]
+                },
+                "UsersPermissionsUserConnectionBlocked": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionBlocked",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionBlocked schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionBlocked"
+                    ]
+                },
+                "UsersPermissionsUserConnectionRole": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionRole",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionRole schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionRole"
+                    ]
+                },
+                "UsersPermissionsUserConnectionCreated_by": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionCreated_by",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionCreated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionCreated_by"
+                    ]
+                },
+                "UsersPermissionsUserConnectionUpdated_by": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserConnectionUpdated_by",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserConnectionUpdated_by schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserConnectionUpdated_by"
+                    ]
+                },
+                "UsersPermissionsUserAggregator": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsUserAggregator",
+                    "type": "string",
+                    "title": "The UsersPermissionsUserAggregator schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsUserAggregator"
+                    ]
+                },
+                "createUserPayload": {
+                    "$id": "#/properties/_typeMap/properties/createUserPayload",
+                    "type": "string",
+                    "title": "The createUserPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createUserPayload"
+                    ]
+                },
+                "updateUserPayload": {
+                    "$id": "#/properties/_typeMap/properties/updateUserPayload",
+                    "type": "string",
+                    "title": "The updateUserPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateUserPayload"
+                    ]
+                },
+                "deleteUserPayload": {
+                    "$id": "#/properties/_typeMap/properties/deleteUserPayload",
+                    "type": "string",
+                    "title": "The deleteUserPayload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteUserPayload"
+                    ]
+                },
+                "Mutation": {
+                    "$id": "#/properties/_typeMap/properties/Mutation",
+                    "type": "string",
+                    "title": "The Mutation schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Mutation"
+                    ]
+                },
+                "createKecamatanInput": {
+                    "$id": "#/properties/_typeMap/properties/createKecamatanInput",
+                    "type": "string",
+                    "title": "The createKecamatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createKecamatanInput"
+                    ]
+                },
+                "KecamatanInput": {
+                    "$id": "#/properties/_typeMap/properties/KecamatanInput",
+                    "type": "string",
+                    "title": "The KecamatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "KecamatanInput"
+                    ]
+                },
+                "updateKecamatanInput": {
+                    "$id": "#/properties/_typeMap/properties/updateKecamatanInput",
+                    "type": "string",
+                    "title": "The updateKecamatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateKecamatanInput"
+                    ]
+                },
+                "InputID": {
+                    "$id": "#/properties/_typeMap/properties/InputID",
+                    "type": "string",
+                    "title": "The InputID schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "InputID"
+                    ]
+                },
+                "editKecamatanInput": {
+                    "$id": "#/properties/_typeMap/properties/editKecamatanInput",
+                    "type": "string",
+                    "title": "The editKecamatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "editKecamatanInput"
+                    ]
+                },
+                "deleteKecamatanInput": {
+                    "$id": "#/properties/_typeMap/properties/deleteKecamatanInput",
+                    "type": "string",
+                    "title": "The deleteKecamatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteKecamatanInput"
+                    ]
+                },
+                "createLokasiInput": {
+                    "$id": "#/properties/_typeMap/properties/createLokasiInput",
+                    "type": "string",
+                    "title": "The createLokasiInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createLokasiInput"
+                    ]
+                },
+                "LokasiInput": {
+                    "$id": "#/properties/_typeMap/properties/LokasiInput",
+                    "type": "string",
+                    "title": "The LokasiInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "LokasiInput"
+                    ]
+                },
+                "updateLokasiInput": {
+                    "$id": "#/properties/_typeMap/properties/updateLokasiInput",
+                    "type": "string",
+                    "title": "The updateLokasiInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateLokasiInput"
+                    ]
+                },
+                "editLokasiInput": {
+                    "$id": "#/properties/_typeMap/properties/editLokasiInput",
+                    "type": "string",
+                    "title": "The editLokasiInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "editLokasiInput"
+                    ]
+                },
+                "deleteLokasiInput": {
+                    "$id": "#/properties/_typeMap/properties/deleteLokasiInput",
+                    "type": "string",
+                    "title": "The deleteLokasiInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteLokasiInput"
+                    ]
+                },
+                "createMapInput": {
+                    "$id": "#/properties/_typeMap/properties/createMapInput",
+                    "type": "string",
+                    "title": "The createMapInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createMapInput"
+                    ]
+                },
+                "MapInput": {
+                    "$id": "#/properties/_typeMap/properties/MapInput",
+                    "type": "string",
+                    "title": "The MapInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "MapInput"
+                    ]
+                },
+                "updateMapInput": {
+                    "$id": "#/properties/_typeMap/properties/updateMapInput",
+                    "type": "string",
+                    "title": "The updateMapInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateMapInput"
+                    ]
+                },
+                "editMapInput": {
+                    "$id": "#/properties/_typeMap/properties/editMapInput",
+                    "type": "string",
+                    "title": "The editMapInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "editMapInput"
+                    ]
+                },
+                "deleteMapInput": {
+                    "$id": "#/properties/_typeMap/properties/deleteMapInput",
+                    "type": "string",
+                    "title": "The deleteMapInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteMapInput"
+                    ]
+                },
+                "createRekapKegiatanInput": {
+                    "$id": "#/properties/_typeMap/properties/createRekapKegiatanInput",
+                    "type": "string",
+                    "title": "The createRekapKegiatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createRekapKegiatanInput"
+                    ]
+                },
+                "RekapKegiatanInput": {
+                    "$id": "#/properties/_typeMap/properties/RekapKegiatanInput",
+                    "type": "string",
+                    "title": "The RekapKegiatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RekapKegiatanInput"
+                    ]
+                },
+                "updateRekapKegiatanInput": {
+                    "$id": "#/properties/_typeMap/properties/updateRekapKegiatanInput",
+                    "type": "string",
+                    "title": "The updateRekapKegiatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateRekapKegiatanInput"
+                    ]
+                },
+                "editRekapKegiatanInput": {
+                    "$id": "#/properties/_typeMap/properties/editRekapKegiatanInput",
+                    "type": "string",
+                    "title": "The editRekapKegiatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "editRekapKegiatanInput"
+                    ]
+                },
+                "deleteRekapKegiatanInput": {
+                    "$id": "#/properties/_typeMap/properties/deleteRekapKegiatanInput",
+                    "type": "string",
+                    "title": "The deleteRekapKegiatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteRekapKegiatanInput"
+                    ]
+                },
+                "createUsulanKegiatanInput": {
+                    "$id": "#/properties/_typeMap/properties/createUsulanKegiatanInput",
+                    "type": "string",
+                    "title": "The createUsulanKegiatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createUsulanKegiatanInput"
+                    ]
+                },
+                "UsulanKegiatanInput": {
+                    "$id": "#/properties/_typeMap/properties/UsulanKegiatanInput",
+                    "type": "string",
+                    "title": "The UsulanKegiatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsulanKegiatanInput"
+                    ]
+                },
+                "updateUsulanKegiatanInput": {
+                    "$id": "#/properties/_typeMap/properties/updateUsulanKegiatanInput",
+                    "type": "string",
+                    "title": "The updateUsulanKegiatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateUsulanKegiatanInput"
+                    ]
+                },
+                "editUsulanKegiatanInput": {
+                    "$id": "#/properties/_typeMap/properties/editUsulanKegiatanInput",
+                    "type": "string",
+                    "title": "The editUsulanKegiatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "editUsulanKegiatanInput"
+                    ]
+                },
+                "deleteUsulanKegiatanInput": {
+                    "$id": "#/properties/_typeMap/properties/deleteUsulanKegiatanInput",
+                    "type": "string",
+                    "title": "The deleteUsulanKegiatanInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteUsulanKegiatanInput"
+                    ]
+                },
+                "createRoleInput": {
+                    "$id": "#/properties/_typeMap/properties/createRoleInput",
+                    "type": "string",
+                    "title": "The createRoleInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createRoleInput"
+                    ]
+                },
+                "RoleInput": {
+                    "$id": "#/properties/_typeMap/properties/RoleInput",
+                    "type": "string",
+                    "title": "The RoleInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "RoleInput"
+                    ]
+                },
+                "updateRoleInput": {
+                    "$id": "#/properties/_typeMap/properties/updateRoleInput",
+                    "type": "string",
+                    "title": "The updateRoleInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateRoleInput"
+                    ]
+                },
+                "editRoleInput": {
+                    "$id": "#/properties/_typeMap/properties/editRoleInput",
+                    "type": "string",
+                    "title": "The editRoleInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "editRoleInput"
+                    ]
+                },
+                "deleteRoleInput": {
+                    "$id": "#/properties/_typeMap/properties/deleteRoleInput",
+                    "type": "string",
+                    "title": "The deleteRoleInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteRoleInput"
+                    ]
+                },
+                "createUserInput": {
+                    "$id": "#/properties/_typeMap/properties/createUserInput",
+                    "type": "string",
+                    "title": "The createUserInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "createUserInput"
+                    ]
+                },
+                "UserInput": {
+                    "$id": "#/properties/_typeMap/properties/UserInput",
+                    "type": "string",
+                    "title": "The UserInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UserInput"
+                    ]
+                },
+                "updateUserInput": {
+                    "$id": "#/properties/_typeMap/properties/updateUserInput",
+                    "type": "string",
+                    "title": "The updateUserInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "updateUserInput"
+                    ]
+                },
+                "editUserInput": {
+                    "$id": "#/properties/_typeMap/properties/editUserInput",
+                    "type": "string",
+                    "title": "The editUserInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "editUserInput"
+                    ]
+                },
+                "deleteUserInput": {
+                    "$id": "#/properties/_typeMap/properties/deleteUserInput",
+                    "type": "string",
+                    "title": "The deleteUserInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "deleteUserInput"
+                    ]
+                },
+                "Upload": {
+                    "$id": "#/properties/_typeMap/properties/Upload",
+                    "type": "string",
+                    "title": "The Upload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Upload"
+                    ]
+                },
+                "FileInfoInput": {
+                    "$id": "#/properties/_typeMap/properties/FileInfoInput",
+                    "type": "string",
+                    "title": "The FileInfoInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "FileInfoInput"
+                    ]
+                },
+                "UsersPermissionsLoginInput": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsLoginInput",
+                    "type": "string",
+                    "title": "The UsersPermissionsLoginInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsLoginInput"
+                    ]
+                },
+                "UsersPermissionsRegisterInput": {
+                    "$id": "#/properties/_typeMap/properties/UsersPermissionsRegisterInput",
+                    "type": "string",
+                    "title": "The UsersPermissionsRegisterInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "UsersPermissionsRegisterInput"
+                    ]
+                },
+                "__Schema": {
+                    "$id": "#/properties/_typeMap/properties/__Schema",
+                    "type": "string",
+                    "title": "The __Schema schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "__Schema"
+                    ]
+                },
+                "__Type": {
+                    "$id": "#/properties/_typeMap/properties/__Type",
+                    "type": "string",
+                    "title": "The __Type schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "__Type"
+                    ]
+                },
+                "__TypeKind": {
+                    "$id": "#/properties/_typeMap/properties/__TypeKind",
+                    "type": "string",
+                    "title": "The __TypeKind schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "__TypeKind"
+                    ]
+                },
+                "__Field": {
+                    "$id": "#/properties/_typeMap/properties/__Field",
+                    "type": "string",
+                    "title": "The __Field schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "__Field"
+                    ]
+                },
+                "__InputValue": {
+                    "$id": "#/properties/_typeMap/properties/__InputValue",
+                    "type": "string",
+                    "title": "The __InputValue schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "__InputValue"
+                    ]
+                },
+                "__EnumValue": {
+                    "$id": "#/properties/_typeMap/properties/__EnumValue",
+                    "type": "string",
+                    "title": "The __EnumValue schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "__EnumValue"
+                    ]
+                },
+                "__Directive": {
+                    "$id": "#/properties/_typeMap/properties/__Directive",
+                    "type": "string",
+                    "title": "The __Directive schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "__Directive"
+                    ]
+                },
+                "__DirectiveLocation": {
+                    "$id": "#/properties/_typeMap/properties/__DirectiveLocation",
+                    "type": "string",
+                    "title": "The __DirectiveLocation schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "__DirectiveLocation"
+                    ]
+                },
+                "FileInput": {
+                    "$id": "#/properties/_typeMap/properties/FileInput",
+                    "type": "string",
+                    "title": "The FileInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "FileInput"
+                    ]
+                },
+                "editFileInput": {
+                    "$id": "#/properties/_typeMap/properties/editFileInput",
+                    "type": "string",
+                    "title": "The editFileInput schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "editFileInput"
+                    ]
+                },
+                "Time": {
+                    "$id": "#/properties/_typeMap/properties/Time",
+                    "type": "string",
+                    "title": "The Time schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Time"
+                    ]
+                },
+                "Long": {
+                    "$id": "#/properties/_typeMap/properties/Long",
+                    "type": "string",
+                    "title": "The Long schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Long"
+                    ]
+                },
+                "CacheControlScope": {
+                    "$id": "#/properties/_typeMap/properties/CacheControlScope",
+                    "type": "string",
+                    "title": "The CacheControlScope schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "CacheControlScope"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "_implementations": {
+            "$id": "#/properties/_implementations",
+            "type": "object",
+            "title": "The _implementations schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {}
+            ],
+            "required": [],
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

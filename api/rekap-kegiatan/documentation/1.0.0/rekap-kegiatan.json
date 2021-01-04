@@ -565,34 +565,6 @@
           "tgl_selesai": {
             "type": "string"
           },
-          "map": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "lat": {
-                "type": "number"
-              },
-              "long_": {
-                "type": "number"
-              },
-              "pekerjaan": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "created_by": {
             "required": [
               "id",
@@ -713,9 +685,6 @@
             "type": "string"
           },
           "tgl_selesai": {
-            "type": "string"
-          },
-          "map": {
             "type": "string"
           },
           "created_by": {

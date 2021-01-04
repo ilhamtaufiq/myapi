@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/maps": {
+    "/air-minums": {
       "get": {
         "deprecated": false,
-        "description": "Find all the maps's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve maps document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Maps"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Maps"
+          "Air-minum"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new maps record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve maps document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Maps"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Maps"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewMaps"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/maps/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of maps documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve maps document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "Maps"
+          "Air-minum"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewAir-minum"
+              }
+            }
+          }
+        }
       }
     },
-    "/maps/{id}": {
+    "/air-minums/count": {
       "get": {
         "deprecated": false,
-        "description": "Find one maps record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve maps document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Maps"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Maps"
+          "Air-minum"
+        ],
+        "parameters": []
+      }
+    },
+    "/air-minums/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Air-minum"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single maps record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve maps document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Maps"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Maps"
+          "Air-minum"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMaps"
+                "$ref": "#/components/schemas/NewAir-minum"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single maps record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single maps based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Maps"
+          "Air-minum"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Maps": {
+      "Air-minum": {
         "required": [
           "id"
         ],
@@ -522,13 +535,22 @@
           "id": {
             "type": "string"
           },
-          "lat": {
-            "type": "number"
+          "nama_pekerjaan": {
+            "type": "string"
           },
-          "long_": {
-            "type": "number"
+          "jumlah_sr": {
+            "type": "integer"
           },
-          "pekerjaan": {
+          "panjang_pipa": {
+            "type": "integer"
+          },
+          "penduduk_terlayani": {
+            "type": "integer"
+          },
+          "nama_pengelola": {
+            "type": "string"
+          },
+          "color": {
             "type": "string"
           },
           "created_by": {
@@ -621,15 +643,24 @@
           }
         }
       },
-      "NewMaps": {
+      "NewAir-minum": {
         "properties": {
-          "lat": {
-            "type": "number"
+          "nama_pekerjaan": {
+            "type": "string"
           },
-          "long_": {
-            "type": "number"
+          "jumlah_sr": {
+            "type": "integer"
           },
-          "pekerjaan": {
+          "panjang_pipa": {
+            "type": "integer"
+          },
+          "penduduk_terlayani": {
+            "type": "integer"
+          },
+          "nama_pengelola": {
+            "type": "string"
+          },
+          "color": {
             "type": "string"
           },
           "created_by": {
@@ -642,9 +673,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Maps"
-    }
-  ]
+  "tags": []
 }
