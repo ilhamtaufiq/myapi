@@ -7,7 +7,7 @@ module.exports = ({ env }) => ({
     default: {
       connector: 'bookshelf',
       settings: {
-        client: 'mysql',
+        client: 'mariadb',
         host: config.host,
         port: config.port,
         database: config.database,
