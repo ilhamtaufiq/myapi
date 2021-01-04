@@ -2,12 +2,12 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "DOCUMENTATION",
+    "title": "Dokumentasi",
     "description": "",
     "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
     "contact": {
-      "name": "TEAM",
-      "email": "contact-email@something.io",
+      "name": "ILHAM TAUFIK - Teknik Informatika UNPI",
+      "email": "ilhamtaufiq@gmail.com",
       "url": "mywebsite.io"
     },
     "license": {
@@ -31,7 +31,7 @@
       "description": "Staging server"
     },
     {
-      "url": "YOUR_PRODUCTION_SERVER",
+      "url": "https://apiabs.herokuapp.com",
       "description": "Production server"
     }
   ],
