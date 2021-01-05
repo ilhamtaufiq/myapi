@@ -65,10 +65,7 @@ module.exports = {
         },
         "cors": {
             "enabled": true,
-            "headers": '*',
-            "origins": '*',
-            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"],
-            
+            "origin": ['*']
         },
         "ip": {
             "enabled": false,
