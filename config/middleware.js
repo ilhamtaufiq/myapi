@@ -8,9 +8,9 @@ module.exports = {
         after: [ 'parser', 'router' ],
     },
     settings: {
-        public: {
-            path: './public',
-            maxAge: 60000,
+        cors: {
+            enabled: true,
+            origin: ['http://localhost'],
         },
         // request middlewares
         session: {
@@ -43,28 +43,25 @@ module.exports = {
         },
         // security middlewares
         "csp": {
-            "enabled": false,
+            "enabled": true,
             "policy": ["block-all-mixed-content"]
         },
         "p3p": {
-            "enabled": false,
+            "enabled": true,
             "value": ""
         },
         "hsts": {
-            "enabled": false,
+            "enabled": true,
             "maxAge": 31536000,
-            "includeSubDomains": false
+            "includeSubDomains": true
         },
         "xframe": {
-            "enabled": false,
+            "enabled": true,
             "value": "SAMEORIGIN"
         },
         "xss": {
-            "enabled": false,
+            "enabled": true,
             "mode": "block"
-        },
-        "cors": {
-            "enabled": true
         },
         "ip": {
             "enabled": false,
