@@ -5,6 +5,8 @@ module.exports = {
         enabled: true,
         headers: '*',
         origins: '*',
+        methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"],
+
       },
     },
   };
