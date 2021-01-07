@@ -2,7 +2,7 @@ module.exports = ({ env }) => ({
   settings: {
     cors: {
       enabled: true,
-      origin: ['http://localhost:8080', 'https://abs-dpkpp.herokuapp.com'],
+      origin: ['http://localhost:8080', 'https://abs-dpkpp.herokuapp.com', 'https://apiabs.herokuapp.com'],
       headers: [
         'Content-Type',
         'Authorization',
