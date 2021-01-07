@@ -1,6 +1,6 @@
 {
 "cors": {
-    "origin": "https://localhost:8080, https://abs-dpkpp.herokuapp.com, https://apiabs.herokuapp.com"
+    "origin": "http://localhost:8080, https://abs-dpkpp.herokuapp.com, https://apiabs.herokuapp.com"
     
     }
 }
