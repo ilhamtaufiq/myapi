@@ -1,0 +1,12 @@
+{
+    "cors": {
+      "enabled": true,
+      "origin": "http://localhost:8080, https://abs-dpkpp.herokuapp.com, http://apiabs.herokuapp.com",
+      "methods": [
+          "GET",
+          "POST"
+      ],
+      "headers":["*"]
+    }
+  }
+  
