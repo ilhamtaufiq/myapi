@@ -1,12 +1,14 @@
-module.exports = {
-  //...
+module.exports = ({ env }) => ({
   settings: {
     cors: {
-      enabled: true, //<--
-      origin: ['*'], // ['*'] to allow all origins
-      headers: ['Content-Type', 'Authorization', 'X-Frame-Options', 'x-csrf-token'], // ['*'] to allow all headers
+      enabled: true,
+      origin: ['http://localhost:8080'],
+      headers: [
+        'Content-Type',
+        'Authorization',
+        'X-Frame-Options',
+        'Captcha-Response',
+      ],
     },
-  }
-  //...
-};
-
+  },
+});
